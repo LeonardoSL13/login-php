@@ -13,7 +13,7 @@ if(isset($_POST["submit"])) {
     $password = $_POST["password"];
 
     // verifica se o nome de usuário e a senha estão corretos
-    if($username == "exemplo" && $password == "123456") {
+    if($username == "123" && $password == "123") {
         // define a sessão de login e redireciona para a página principal
         $_SESSION["username"] = $username;
         header("Location: main.php");
@@ -25,21 +25,32 @@ if(isset($_POST["submit"])) {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-	<title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<h1>Login</h1>
-	<?php if(isset($error)): ?>
-		<p><?php echo $error; ?></p>
-	<?php endif; ?>
-	<form method="post">
-		<label for="username">Nome de usuário:</label>
-		<input type="text" name="username" required><br><br>
-		<label for="password">Senha:</label>
-		<input type="password" name="password" required><br><br>
-		<input type="submit" name="submit" value="Entrar">
-	</form>
+    <div class="container">
+        <h1>Login</h1>
+        <?php if(isset($error)): ?>
+            <p class="error"><?php echo $error; ?></p>
+        <?php endif; ?>
+        <form method="post" class="form">
+            <div class="form-group">
+                <label for="username">Nome de usuário:</label>
+                <input type="text" name="username" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="password" name="password" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" name="submit" value="Entrar" class="btn">
+            </div>
+        </form>
+    </div>
 </body>
 </html>

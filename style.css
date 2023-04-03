@@ -1,0 +1,145 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	background-color: #f0f0f0;
+}
+
+/* cabeçalho */
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	background-color: #f44336;
+	color: #fff;
+}
+
+.header h1 {
+	margin: 0;
+}
+
+.header a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+.header a:hover {
+	text-decoration: underline;
+}
+
+/* menu */
+nav {
+	background-color: #333;
+	overflow: hidden;
+}
+
+nav a {
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	background-color: #4caf50;
+}
+
+/* container */
+.container {
+	margin: 10% auto;
+	width: 90%;
+	max-width: 600px;
+	background-color: #fff;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.container h1 {
+	margin: 0;
+	padding: 20px;
+	background-color: #f44336;
+	color: #fff;
+	text-align: center;
+}
+
+.container form {
+	padding: 20px;
+}
+
+.container .form-group {
+	margin-bottom: 20px;
+}
+
+.container label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.container input[type="text"],
+.container input[type="password"],
+.container select {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+}
+
+.container select {
+	height: 40px;
+}
+
+.container input[type="submit"] {
+	background-color: #4caf50;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 4px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.container input[type="submit"]:hover {
+	background-color: #3e8e41;
+}
+
+.container .error {
+	color: #f44336;
+	margin-top: 5px;
+}
+
+/* dashboard */
+.dashboard {
+	display: flex;
+}
+
+.dashboard nav {
+	width: 200px;
+}
+
+.dashboard .content {
+	flex: 1;
+	padding: 20px;
+}
+
+/* cores das telas */
+.dashboard .content {
+	background-color: #efefef;
+}
+
+.dashboard .cadastro-cliente {
+	background-color: #fff;
+}
+
+.dashboard .cadastro-conta {
+	background-color: #fafafa;
+}
+
+.dashboard .solicitacao-emprestimo {
+	background-color: #eaeaea;
+}
