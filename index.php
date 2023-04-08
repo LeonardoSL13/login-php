@@ -11,8 +11,6 @@ if(isset($_SESSION["username"])) {
 if(isset($_POST["submit"])) {
     $username = $_POST["username"];
     $password = $_POST["password"];
-
-    
     // verifica se o nome de usuário e a senha estão corretos
     if($username == "teste" && $password == "123") {
         // define a sessão de login e redireciona para a página principal
